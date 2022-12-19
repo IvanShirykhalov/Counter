@@ -7,12 +7,6 @@ function App() {
     const minValue = 0
     const maxValue = 5
 
-    const resetValue = () => {
-        if (value === maxValue){
-
-        }
-    }
-
     return (
         <div className="App">
             <Counter value={value} setValue={setValue} maxValue={maxValue} minValue={minValue}/>
