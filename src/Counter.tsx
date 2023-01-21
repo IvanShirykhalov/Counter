@@ -27,7 +27,7 @@ export const Counter = ({setValue, value, minValue, maxValue}: CounterPropsType)
             </div>
             <div className={s.button}>
                 <Inc value={value} maxValue={maxValue} setValue={() => setValue(value + 1)} title={'Inc'}/>
-                <Reset title={'Reset'} setValue={() => setValue(0)} value={value} minValue={minValue}/>
+                <Reset title={'Reset'} setValue={() => setValue(minValue)} value={value} minValue={minValue}/>
             </div>
         </div>
     );
