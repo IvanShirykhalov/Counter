@@ -1,38 +1,14 @@
-import React, {ChangeEvent, useState} from 'react';
-import './App.css';
-import {Counter} from "./Counter";
+import React from 'react';
+import s from './App.module.css';
+import {Counter} from "./Components/Counter";
+import {HashRouter} from "react-router-dom";
 
 function App() {
-
-    const [minValue, setMinValue] = useState<number>(3)
-    const [maxValue, setMaxValue] = useState<number>(6)
-
-    const [value, setValue] = useState<number>(minValue)
-
-
-    /*    const onChangeMaxValue = (e: ChangeEvent<HTMLInputElement>) => {
-            setMaxValue(Number(e.currentTarget.value))
-        }
-
-        const onChangeMinValue = (e: ChangeEvent<HTMLInputElement>) => {
-            setMinValue(Number(e.currentTarget.value))
-        }
-
-
-        const setLS = () => {
-            localStorage.setItem('min', JSON.stringify(minValue))
-
-
-            localStorage.setItem('max', JSON.stringify(maxValue))
-
-
-        }*/
-
-
     return (
-        <div className="App">
-            <Counter value={value} setValue={setValue} maxValue={maxValue} minValue={minValue} setMinValue={setMinValue}
-                     setMaxValue={setMaxValue}/>
+        <div className={s.App}>
+            <HashRouter>
+                <Counter/>
+            </HashRouter>
         </div>
     );
 }
